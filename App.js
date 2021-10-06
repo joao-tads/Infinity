@@ -8,7 +8,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Desire from './src/pages/bottom/Desire';
 import Notifications from './src/pages/bottom/Notifications';
 import Profile from './src/pages/bottom/Profile';
-import Detail, { navigation } from './src/pages/stack/Detail';
+import Detail from './src/pages/stack/Detail';
 
 function HomeScreen({ navigation }) {
   return (
@@ -21,7 +21,7 @@ function HomeScreen({ navigation }) {
           <TouchableOpacity
             key={item}
             onPress={() => {
-              navigation.push('Detail')
+              navigation.navigate('Detail')
             }}
           >
             <Text>
@@ -72,7 +72,7 @@ function TabBottom() {
     >
       <NeewTab.Screen
         name="HomeScreen"
-        component={HomeScreen}
+        component={PageStake}
         options={{
           tabBarLabel: 'Página inicial',
           tabBarIcon: ({ color }) => (

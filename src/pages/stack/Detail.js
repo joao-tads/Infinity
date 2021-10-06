@@ -3,10 +3,8 @@ import { View, Text } from 'react-native';
 import { Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-// import { Container } from './styles';
-
-function Detail({ navigation }) {
-    const navigation = useNavigation();
+function Detail() {
+    const nav = useNavigation();
 
     return (
         <View>
@@ -14,7 +12,7 @@ function Detail({ navigation }) {
             <Button
                 title="Back"
                 onPress={() => {
-                    navigation.goBack();
+                    nav.goBack();
                 }}
             />
         </View>
